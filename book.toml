@@ -4,3 +4,34 @@ language = "en"
 multilingual = false
 src = "src"
 title = "BrainBox"
+
+
+
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[preprocessor.emojicodes]
+
+[preprocessor.mermaid]
+command = "mdbook-mermaid"
+
+[preprocessor.admonish]
+command = "mdbook-admonish"
+assets_version = "2.0.1" # do not edit: managed by `mdbook-admonish install`
+
+[output.html]
+additional-js = [
+    #    mermaid
+    "./plugins/mermaid/mermaid.min.js",
+    "./plugins/mermaid/mermaid-init.js",
+    # pagetoc
+    "./plugins/pagetoc/sidebar.js"
+]
+
+additional-css = [
+    # pagetoc
+    "./plugins/pagetoc/style.css",
+    "./plugins/admonish/mdbook-admonish.css",
+]
